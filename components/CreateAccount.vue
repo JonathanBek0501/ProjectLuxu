@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4 sm:px-6 pb-5">
+    <div class="px-4 sm:px-6">
         <h2 class="font-bold text-xl/none text-brand-gray-50 pb-4 lg:py-8">Creating account</h2>
 
         <form class="space-y-2">
