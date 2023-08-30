@@ -23,10 +23,10 @@
             </button>
         </div>
 
-        <div class="pt-5">
+        <div class="pt-5 pb-10">
             <!-- Account -->
             <div v-if="tab === 1">
-                <div v-if="subTab === 0" class="pb-10">
+                <div v-if="subTab === 0">
                     <div class="grid sm:grid-cols-[1fr_128px] items-center gap-x-6">
                         <div class="w-full bg-download-gradient flex items-center justify-between text-sm font-semibold rounded p-3">
                             <span class="text-brand-gray-200">
@@ -173,7 +173,7 @@
                     <input type="email" name="" id="repeatNewEmail" class="tetriary w-full" placeholder="Repeat new email">
 
                     <div class="absolute bottom-0 left-0 lg:static w-full px-4 lg:px-0 grid sm:grid-cols-2 gap-2 pt-2">
-                        <button @click="subTab = 0" type="button" class="secondary rounded py-2.5 px-3">Back to user panel</button>
+                        <button @click="subTab = 0" type="button" class="secondary rounded p-4 lg:py-2.5 lg:px-3">Back to user panel</button>
                         <ButtonPrimary title="Confirm change" />
                     </div>
                 </div>

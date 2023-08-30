@@ -1,5 +1,5 @@
 <template>
-    <div class="relative h-full px-4 sm:px-6">
+    <div class="px-4 sm:px-6 pb-5">
         <h2 class="font-bold text-xl/none text-brand-gray-50 pb-4 lg:py-8">Creating account</h2>
 
         <form class="space-y-2">
@@ -54,8 +54,8 @@
                 </label>
             </div>
 
-            <div class="absolute bottom-0 left-0 lg:static w-full px-4 lg:px-0 grid sm:grid-cols-2 gap-2 pt-2">
-                <ButtonSecondary @button-clicked="createAcc" title="Back to Login" custom-class="py-2.5 px-3"/>
+            <div class="grid sm:grid-cols-2 gap-2 pt-2">
+                <ButtonSecondary @button-clicked="createAcc" title="Back to Login" custom-class="p-4 lg:py-2.5 lg:px-3"/>
                 <ButtonPrimary title="Confirm" />
             </div>
         </form>
