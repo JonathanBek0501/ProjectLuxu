@@ -106,7 +106,7 @@
     </div>
 
     <!-- Scroll Top -->
-    <button @click="scrollToTop" type="button" class="fixed lg:absolute z-10 left-4 bottom-5 lg:bottom-0 rounded-lg lg:rounded-l-lg block w-fit group bg-brand-black-socials/50 active:result lg:hover:result lg:hover:text-white text-brand-gray-200 transition-all ease-linear p-3">
+    <button @click="scrollToTop" type="button" class="fixed lg:absolute z-10 left-4 bottom-5 lg:bottom-0 rounded-lg lg:rounded-l-lg block w-fit group bg-brand-black-socials/50 active:result sm:hover:result sm:hover:text-white text-brand-gray-200 transition-all ease-linear p-3">
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.88 29L12 27.1074L20 19.0537L28 27.1074L26.12 29L20 22.8523L13.88 29ZM13.88 20.9463L12 19.0537L20 11L28 19.0537L26.12 20.9463L20 14.7987L13.88 20.9463Z" fill="currentColor"/>
       </svg>
