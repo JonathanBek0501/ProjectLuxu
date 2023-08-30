@@ -118,7 +118,7 @@
           <!-- News -->
           <News :downloadClient="downloadClient" @showDownloadClient="showDownloadClient" class="lg:col-span-2 xl:col-span-1"/>
           <!-- Log in -->
-          <div :class="isSmallWindow && !mobilePanel ? 'hidden lg:block' : ''" class="fixed w-full bg-black top-0 left-0 lg:static h-mobile lg:h-auto z-10 py-8 lg:py-0">
+          <div :class="isSmallWindow && !mobilePanel ? 'hidden lg:block' : ''" class="fixed w-full bg-black top-[73px] left-0 lg:static h-mobile lg:h-auto z-10 py-8 lg:py-0">
             <CreateAccount v-if="newUser" @createAcc="createAcc" @showDownloadClient="showDownloadClient" />
             <Download v-if="downloadClient && !isSmallWindow" :heading="true">
               <template #heading>
