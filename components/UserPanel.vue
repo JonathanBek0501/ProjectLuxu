@@ -1,5 +1,5 @@
 <template>
-    <div :class="subTab === 1 || subTab === 2 || subTab === 3 || newTicked ? 'h-mobile' : ''" class="relative px-4 sm:px-6 pb-10">
+    <div class="relative h-full px-4 sm:px-6">
         <div class="flex items-center justify-between gap-6 pb-4 lg:py-5">
             <h2 class="font-bold text-lg/6 sm:text-xl/none text-brand-gray-50">
                 Hello <span class="text-brand-pink">#nickname#</span>, this is your User Panel
