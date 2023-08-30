@@ -26,7 +26,7 @@
         <div class="pt-5">
             <!-- Account -->
             <div v-if="tab === 1">
-                <div v-if="subTab === 0">
+                <div v-if="subTab === 0" class="pb-10">
                     <div class="grid sm:grid-cols-[1fr_128px] items-center gap-x-6">
                         <div class="w-full bg-download-gradient flex items-center justify-between text-sm font-semibold rounded p-3">
                             <span class="text-brand-gray-200">
