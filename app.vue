@@ -3,7 +3,7 @@
     <a href="#" class="hidden lg:inline-block relative h-48 xl:h-80 2xl:h-auto z-10">
       <img class="w-full h-full" src="/image/logo.png" alt="">
     </a>
-    <div class="flex lg:hidden justify-end items-center border-b border-brand-black-50 gap-4 p-4">
+    <div class="fixed w-full bg-[#121316] top-0 left-0 z-10 flex lg:hidden justify-end items-center border-b border-brand-black-50 gap-4 p-4">
       <!-- menu btn -->
       <button @click="toggleMenu" type="button" class="mobileBtn mr-auto p-1">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,19 +106,19 @@
     </div>
 
     <!-- Scroll Top -->
-    <button @click="scrollToTop" type="button" class="fixed lg:absolute z-10 left-4 bottom-5 lg:bottom-0 rounded-lg lg:rounded-l-lg block w-fit group bg-brand-black-socials/50 active:result sm:hover:result sm:hover:text-white text-brand-gray-200 transition-all ease-linear p-3">
+    <button @click="scrollToTop" type="button" v-if="!mobilePanel" class="fixed lg:absolute z-10 left-4 bottom-5 lg:bottom-0 rounded-lg lg:rounded-l-lg block w-fit group bg-brand-black-socials/50 active:result sm:hover:result sm:hover:text-white text-brand-gray-200 transition-all ease-linear p-3">
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.88 29L12 27.1074L20 19.0537L28 27.1074L26.12 29L20 22.8523L13.88 29ZM13.88 20.9463L12 19.0537L20 11L28 19.0537L26.12 20.9463L20 14.7987L13.88 20.9463Z" fill="currentColor"/>
       </svg>
     </button>
 
     <div class="lg:bg-white/20 lg:rounded-t-2xl lg:pt-1 lg:px-1">
-      <div class="bg-black backdrop-blur-none pt-4 lg:pt-0 lg:rounded-t-xl">
+      <div class="bg-black backdrop-blur-none pt-20 lg:pt-0 lg:rounded-t-xl">
         <div class="grid lg:grid-cols-3 xl:grid-cols-[1fr_520px]">
           <!-- News -->
           <News :downloadClient="downloadClient" @showDownloadClient="showDownloadClient" class="lg:col-span-2 xl:col-span-1"/>
           <!-- Log in -->
-          <div :class="isSmallWindow && !mobilePanel ? 'hidden lg:block' : ''" class="fixed w-full bg-black overflow-y-auto top-[73px] left-0 lg:static h-mobile lg:h-auto z-10 py-8 lg:py-0">
+          <div :class="isSmallWindow && !mobilePanel ? 'hidden lg:block' : ''" class="inset-0 fixed z-30 w-full bg-black overflow-y-auto custom-scrollbar-table top-[73px] left-0 lg:static h-screen lg:h-auto z-10 py-8 lg:py-0">
             <CreateAccount v-if="newUser" @createAcc="createAcc" @showDownloadClient="showDownloadClient" />
             <Download v-if="downloadClient && !isSmallWindow" :heading="true">
               <template #heading>
@@ -128,7 +128,7 @@
                 </div>
               </template>
             </Download>
-            <div v-if="!logged && !newUser" class="flex flex-col h-full justify-between">
+            <div v-if="!logged && !newUser" class="flex flex-col h-mobile lg:h-full justify-between">
               <Login :logged="logged" @toggleLogged="toggleLogged" :new-user="newUser" @createAcc="createAcc" />
               <ToastNotification class="mt-10 lg:mt-auto" />
             </div>
