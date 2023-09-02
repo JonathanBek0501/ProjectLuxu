@@ -112,13 +112,13 @@
       </svg>
     </button>
 
-    <div class="lg:bg-white/20 lg:rounded-t-2xl lg:pt-1 lg:px-1">
-      <div class="bg-black backdrop-blur-none pt-4 lg:pt-0 lg:rounded-t-xl">
+    <div class="lg:bg-white/20 lg:rounded-t-2xl lg:pt-1 lg:px-1 w-full">
+      <div class="bg-black backdrop-blur-none pt-4 lg:pt-0 lg:rounded-t-xl overflow-hidden">
         <div class="grid lg:grid-cols-3 xl:grid-cols-[1fr_520px]">
           <!-- News -->
           <News :downloadClient="downloadClient" @showDownloadClient="showDownloadClient" class="lg:col-span-2 xl:col-span-1"/>
           <!-- Log in -->
-          <div :class="isSmallWindow && !mobilePanel ? 'hidden lg:block' : ''" class="fixed w-full bg-black overflow-y-auto top-[73px] left-0 lg:static h-mobile lg:h-auto z-10 py-8 lg:py-0">
+          <div :class="isSmallWindow && !mobilePanel ? 'hidden lg:block' : ''" class="fixed lg:flex flex-col w-full bg-black overflow-y-auto top-[73px] left-0 lg:static h-mobile lg:h-auto z-10 py-8 lg:py-0">
             <CreateAccount v-if="newUser" @createAcc="createAcc" @showDownloadClient="showDownloadClient" />
             <Download v-if="downloadClient && !isSmallWindow" :heading="true">
               <template #heading>
