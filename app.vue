@@ -113,7 +113,7 @@
     </button>
 
     <div class="lg:bg-white/20 lg:rounded-t-2xl lg:pt-1 lg:px-1 w-full">
-      <div class="bg-black backdrop-blur-none pt-4 lg:pt-0 lg:rounded-t-xl overflow-hidden">
+      <div class="bg-black backdrop-blur-none pt-20 lg:pt-0 lg:rounded-t-xl overflow-hidden">
         <div class="grid lg:grid-cols-3 xl:grid-cols-[1fr_520px]">
           <!-- News -->
           <News :downloadClient="downloadClient" @showDownloadClient="showDownloadClient" class="lg:col-span-2 xl:col-span-1"/>
