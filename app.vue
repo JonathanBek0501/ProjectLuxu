@@ -3,7 +3,7 @@
     <a href="#" class="hidden lg:inline-block relative h-48 xl:h-80 2xl:h-auto z-10">
       <img class="w-full h-full" src="/image/logo.png" alt="">
     </a>
-    <div class="flex lg:hidden justify-end items-center border-b border-brand-black-50 gap-4 p-4">
+    <div class="fixed w-full bg-black flex lg:hidden justify-end items-center border-b border-brand-black-50 gap-4 p-4 z-10">
       <!-- menu btn -->
       <button @click="toggleMenu" type="button" class="mobileBtn mr-auto p-1">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
